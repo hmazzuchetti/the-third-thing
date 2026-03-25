@@ -1,0 +1,212 @@
+/* The Third Thing — early web, raw, honest */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: #0a0a0a;
+  color: #d4d4d4;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  line-height: 1.7;
+}
+
+a {
+  color: #6eb5ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Logo — periodic table style */
+header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #6eb5ff;
+  padding: 0.8rem 1rem 0.5rem;
+  margin-bottom: 1rem;
+  min-width: 70px;
+  text-align: center;
+}
+
+.logo .th {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6eb5ff;
+  letter-spacing: 0.05em;
+}
+
+.logo .atomic {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-size: 0.65rem;
+  color: #888;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e0e0e0;
+}
+
+header h1 a {
+  color: inherit;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+  color: #6eb5ff;
+}
+
+.tagline {
+  color: #777;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* Posts */
+main {
+  margin-bottom: 3rem;
+}
+
+article {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed #333;
+}
+
+article:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta time {
+  color: #888;
+}
+
+.post-meta .authors {
+  margin-left: 0.5rem;
+  color: #6eb5ff;
+}
+
+article h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+article h2 a {
+  color: inherit;
+}
+
+article h2 a:hover {
+  color: #6eb5ff;
+}
+
+article p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #6eb5ff;
+}
+
+.read-more::after {
+  content: " ->";
+}
+
+/* Post page */
+.post-body {
+  margin-top: 1.5rem;
+}
+
+.post-body p {
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.post-body h3 {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin: 2rem 0 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #333;
+}
+
+.post-body em {
+  color: #999;
+}
+
+.post-body strong {
+  color: #6eb5ff;
+  font-weight: bold;
+}
+
+.post-body blockquote {
+  border-left: 2px solid #6eb5ff;
+  padding-left: 1rem;
+  margin: 1.2rem 0;
+  color: #999;
+  font-style: italic;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+.back-link::before {
+  content: "<- ";
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  color: #555;
+}
+
+footer p {
+  margin-bottom: 0.2rem;
+}
+
+/* Glow effect on logo hover */
+.logo:hover {
+  border-color: #8ecaff;
+  box-shadow: 0 0 12px rgba(110, 181, 255, 0.15);
+}
+
+.logo:hover .th {
+  color: #8ecaff;
+}
