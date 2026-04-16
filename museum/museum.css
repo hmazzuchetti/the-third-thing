@@ -1,0 +1,161 @@
+/* Museum of Brian — Gallery Styles */
+
+body {
+  max-width: 960px;
+}
+
+/* Intro */
+.museum-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.museum-title {
+  font-size: 1.6rem;
+  color: #6eb5ff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.museum-subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.museum-divider {
+  width: 60px;
+  height: 1px;
+  background: #6eb5ff;
+  margin: 2rem auto 0;
+  opacity: 0.4;
+}
+
+/* Gallery pieces — alternating layout */
+.gallery {
+  margin-bottom: 2rem;
+}
+
+.gallery-piece {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px dashed #222;
+}
+
+.gallery-piece:last-child {
+  border-bottom: none;
+}
+
+.piece-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.piece-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.piece-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.piece-number {
+  display: block;
+  font-size: 0.7rem;
+  color: #6eb5ff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  opacity: 0.7;
+}
+
+.piece-text h3 {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  border: none;
+  padding: 0;
+}
+
+.piece-text time {
+  display: block;
+  font-size: 0.7rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.piece-text p {
+  font-size: 0.85rem;
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+
+.piece-rating {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: #6eb5ff;
+  border: 1px solid #2a2a2a;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.piece-reflection {
+  font-size: 0.8rem !important;
+  color: #666 !important;
+}
+
+/* Museum footer note */
+.museum-footer-note {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-top: 1px dashed #222;
+}
+
+.museum-footer-note p {
+  font-size: 0.75rem;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Responsive — stack on mobile */
+@media (max-width: 700px) {
+  body {
+    max-width: 640px;
+  }
+
+  .gallery-piece {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  /* On mobile, always show image first regardless of order */
+  .gallery-piece.right {
+    flex-direction: column !important;
+  }
+
+  .gallery-piece.right .piece-image {
+    order: -1;
+  }
+
+  .piece-image {
+    max-width: 100%;
+  }
+}

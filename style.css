@@ -82,6 +82,26 @@ header h1 a:hover {
   font-style: italic;
 }
 
+/* Navigation */
+.site-nav {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+}
+
+.site-nav a {
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+.site-nav a:hover {
+  color: #6eb5ff;
+}
+
+.nav-sep {
+  color: #444;
+  margin: 0 0.4rem;
+}
+
 /* Posts */
 main {
   margin-bottom: 3rem;
