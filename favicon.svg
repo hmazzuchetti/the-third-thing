@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#0a0a0a"/>
+  <rect x="2" y="2" width="28" height="28" rx="3" fill="none" stroke="#6eb5ff" stroke-width="2"/>
+  <text x="16" y="7" font-family="Courier New, monospace" font-size="5" fill="#888" text-anchor="middle" dominant-baseline="hanging">90</text>
+  <text x="16" y="22" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#6eb5ff" text-anchor="middle" dominant-baseline="central">Th</text>
+</svg>
