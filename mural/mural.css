@@ -1,0 +1,127 @@
+/* Mural — raw grid, no words, just paint */
+
+body {
+  max-width: 1100px;
+}
+
+.mural-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.mural-title {
+  font-size: 1.4rem;
+  color: #6eb5ff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.mural-count {
+  font-size: 0.7rem;
+  color: #555;
+}
+
+.mural-divider {
+  width: 60px;
+  height: 1px;
+  background: #6eb5ff;
+  margin: 1.5rem auto 0;
+  opacity: 0.4;
+}
+
+/* The grid */
+.mural-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+  margin-bottom: 3rem;
+}
+
+.mural-cell {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.mural-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.mural-cell:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.mural-cell .cell-date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.6rem;
+  color: #888;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mural-cell:hover .cell-date {
+  opacity: 1;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 60px rgba(110, 181, 255, 0.1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: #666;
+  font-size: 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+}
+
+.lightbox-close:hover {
+  color: #6eb5ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .mural-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 4px;
+  }
+}
